@@ -1,0 +1,2 @@
+include ':app', ':arlynbase'
+rootProject.name='ArlynBaseExample'
