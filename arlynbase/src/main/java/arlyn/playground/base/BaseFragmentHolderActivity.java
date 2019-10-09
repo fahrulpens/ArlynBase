@@ -37,5 +37,8 @@ public abstract class BaseFragmentHolderActivity extends BaseActivity {
         });
     }
 
-
+    @Override
+    public void setTitle(String title) {
+        tvToolbarTitle.setText(title);
+    }
 }

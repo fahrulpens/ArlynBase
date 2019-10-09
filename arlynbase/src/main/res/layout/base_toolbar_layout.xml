@@ -5,7 +5,7 @@
     android:layout_height="wrap_content"
     android:orientation="vertical">
 
-    <android.support.v7.widget.Toolbar
+    <androidx.appcompat.widget.Toolbar
         android:layout_width="match_parent"
         android:layout_height="70dp"
         android:background="?attr/colorPrimary"
@@ -31,7 +31,6 @@
                     android:layout_width="48dp"
                     android:layout_height="48dp"
                     android:paddingLeft="16dp"
-                    android:src="@mipmap/ic_logo_1_round"
                     android:visibility="gone" />
 
                 <TextView
@@ -43,8 +42,8 @@
                     android:gravity="center_vertical"
                     android:maxLines="1"
                     android:paddingLeft="6dp"
-                    android:text="@string/fragment_title_profile"
-                    android:textColor="?attr/textWhiteColor"
+                    android:text="@string/app_name"
+                    android:textColor="@color/pensWhite"
                     android:textSize="18sp" />
 
             </LinearLayout>
@@ -59,7 +58,7 @@
                 android:paddingTop="25dp"
                 android:paddingRight="16dp"
                 android:src="@drawable/ic_log_out"
-                android:tint="?attr/textWhiteColor" />
+                android:tint="@color/pensWhite" />
 
             <ImageButton
                 android:id="@+id/btBack"
@@ -72,14 +71,14 @@
                 android:paddingTop="25dp"
                 android:paddingRight="16dp"
                 android:src="@drawable/ic_log_out"
-                android:tint="?attr/textWhiteColor" />
+                android:tint="@color/pensWhite" />
 
 
         </RelativeLayout>
 
 
 
-    </android.support.v7.widget.Toolbar>
+    </androidx.appcompat.widget.Toolbar>
 
     <View
         android:id="@+id/vMenuBarShadow"

@@ -1,7 +1,7 @@
 package arlyn.playground.base;
 
 
-import android.support.annotation.Nullable;
+import androidx.annotation.Nullable;
 
 public interface BaseView<T> {
     void setPresenter(T presenter);

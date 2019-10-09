@@ -34,8 +34,4 @@ public abstract class BaseActivity extends FragmentActivity implements FragmentL
         this.currentFragment = fragment;
     }
 
-    @Override
-    public void setTitle(CharSequence title) {
-        super.setTitle(title);
-    }
 }

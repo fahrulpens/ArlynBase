@@ -12,7 +12,7 @@ import androidx.appcompat.view.menu.BaseMenuPresenter;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentActivity;
 
-public abstract class BaseFragment<T extends FragmentActivity, U extends BaseMenuPresenter> extends Fragment {
+public abstract class BaseFragment<T extends FragmentActivity, U extends BasePresenter> extends Fragment {
 
     protected String title;
     protected T activity;
