@@ -33,13 +33,15 @@ public class MainPresenter implements MainContract.Presenter{
     @Override
     public void performLogin(final String email, final String password){
 
-        Log.i("LoginUser", "LogStatusLogin : dosen");
+        view.setLoadingDialog(true, "Login...");
         mainDataSource.login(email, password,new RequestResponseListener() {
             @Override
             public void onSuccess(String dataResult) {
-                new DataResult<User>().getResult(user, dataResult);
+                user = new DataResult<User>().getResult(user, User.class, dataResult);
                 if(user.getStatusCode().equals("000")) {//success
-                    Log.i("LOGIN RESULT", dataResult);
+                    view.setLoadingDialog(false, null);
+                    view.showStatus(ConstantStatus.STATUS_SUCCESS, "Login Success");
+                    Log.i("Test", dataResult);
                 }else{
                     view.setLoadingDialog(false, null);
                     view.showStatus(ConstantStatus.STATUS_ERROR, "Login failed");

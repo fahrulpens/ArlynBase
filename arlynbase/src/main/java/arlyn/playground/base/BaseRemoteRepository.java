@@ -39,6 +39,23 @@ public abstract class BaseRemoteRepository<V> {
 
         setEndPoint();
     }
+    protected BaseRemoteRepository(boolean isUnsafeRepository) {
+        HttpLoggingInterceptor logging = new HttpLoggingInterceptor();
+        logging.setLevel(HttpLoggingInterceptor.Level.BODY);
+
+        Retrofit.Builder retrofitBuilder = new Retrofit.Builder()
+                .baseUrl(setBaseUrl())
+                .addConverterFactory(ScalarsConverterFactory.create());
+
+        if (enableLogging()) {
+            OkHttpClient httpClient = UnsafeOkHttpClient.getUnsafeOkHttpClient();
+            retrofitBuilder.client(httpClient);
+        }
+
+        retrofit = retrofitBuilder.build();
+
+        setEndPoint();
+    }
 
     protected abstract String setBaseUrl();
 

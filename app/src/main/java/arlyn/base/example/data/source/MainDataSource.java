@@ -8,7 +8,15 @@ import arlyn.playground.base.RequestResponseListener;
 import retrofit2.Call;
 
 public class MainDataSource extends BaseRemoteRepository<MainEndPoint> {
-    private static final String BASE_URL = "http://online.mis.polipangkep.ac.id";
+    private static final String BASE_URL = "http://arlyn-project.online";
+
+    public MainDataSource() {
+        super();
+    }
+
+    public MainDataSource(boolean isUnsafeRepository) {
+        super(isUnsafeRepository);
+    }
 
     @Override
     protected String setBaseUrl() {

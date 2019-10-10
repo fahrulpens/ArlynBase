@@ -10,8 +10,8 @@ import retrofit2.http.POST;
 import retrofit2.http.QueryMap;
 
 public interface MainEndPoint {
-    String END_POINT_ONE = "/WS_QR/Data.php";
-    String END_POINT_TWO = "/WS_QR/Data.php";
+    String END_POINT_ONE = "/data.php";
+    String END_POINT_TWO = "/data.php";
 
 
     @GET(END_POINT_ONE)
